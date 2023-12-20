@@ -9,7 +9,8 @@ export default function App() {
         <MenuWrapper />
       </div>
       <h1 className="md:hidden sm:block">
-        Sorry, the application only works on Desktops.
+        Sorry, the application only works on Desktops. Go on the PC and check it
+        out, Nuni... ❤️
       </h1>
     </>
   );
