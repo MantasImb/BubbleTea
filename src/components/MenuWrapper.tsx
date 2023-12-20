@@ -25,7 +25,6 @@ type TeaOrderSelections = {
 }
 
 export default function MenuWrapper() {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [teaOrderSelections, setTeaOrderSelections] =
     useState<TeaOrderSelections>({
       type: "original",
@@ -35,6 +34,7 @@ export default function MenuWrapper() {
       sugar: "0%",
     })
 
+  console.log(setTeaOrderSelections)
   return (
     <div className="absolute top-3 left-3 right-3 bottom-3 p-3 border-4 flex gap-4 border-emerald-100 rounded-xl">
       <NavBar />
