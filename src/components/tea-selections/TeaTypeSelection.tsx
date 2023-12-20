@@ -1,11 +1,17 @@
-import clsx from "clsx";
+import clsx from "clsx"
 import {
   selection_styles,
   active_selection_styles,
   radio_button_styles,
-} from "./styling";
+} from "./styling"
 
-export default function TeaTypeSelection({ teaOrderSelections }) {
+type TeaTypes = "original" | "fruity" | "milk" | "cream"
+
+export default function TeaTypeSelection({
+  selectedType,
+}: {
+  selectedType: TeaTypes
+}) {
   return (
     <div className="flex flex-col bg-emerald-100 rounded-xl p-2">
       <h2 className="text-emerald-600 font-bold text-lg">Choose the type</h2>
@@ -13,7 +19,7 @@ export default function TeaTypeSelection({ teaOrderSelections }) {
         <div
           className={clsx(
             selection_styles,
-            teaOrderSelections.type === "original" && active_selection_styles
+            selectedType === "original" && active_selection_styles
           )}
         >
           <input
@@ -28,7 +34,7 @@ export default function TeaTypeSelection({ teaOrderSelections }) {
         <div
           className={clsx(
             selection_styles,
-            teaOrderSelections.type === "fruity" && active_selection_styles
+            selectedType === "fruity" && active_selection_styles
           )}
         >
           <input
@@ -43,7 +49,7 @@ export default function TeaTypeSelection({ teaOrderSelections }) {
         <div
           className={clsx(
             selection_styles,
-            teaOrderSelections.type === "milk" && active_selection_styles
+            selectedType === "milk" && active_selection_styles
           )}
         >
           <input
@@ -58,7 +64,7 @@ export default function TeaTypeSelection({ teaOrderSelections }) {
         <div
           className={clsx(
             selection_styles,
-            teaOrderSelections.type === "cream" && active_selection_styles
+            selectedType === "cream" && active_selection_styles
           )}
         >
           <input
@@ -72,5 +78,5 @@ export default function TeaTypeSelection({ teaOrderSelections }) {
         </div>
       </form>
     </div>
-  );
+  )
 }
